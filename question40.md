@@ -1,4 +1,3 @@
-```java
 import java.util.*;
 
 /**
@@ -7,6 +6,9 @@ import java.util.*;
  * @Description:
  * @author:GentleSnow
  * @date 2020/9/10 10:33
+ */
+
+/**
  * 给定一个数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。candidates 中的每个数字在每个组合中只能使用一次。
  * 说明：
  * 所有数字（包括目标数）都是正整数。
@@ -31,13 +33,14 @@ import java.util.*;
  * 链接：https://leetcode-cn.com/problems/combination-sum-ii
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+ //修改1.0
 class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(candidates);
         //combo函数传入需要返回的res,候选数组,目标数字,一个新的数组,一个索引
         combo(res, candidates, target, new ArrayList<Integer>(), 0);
-        return null;
+        return res;
     }
 
     private void combo(List<List<Integer>> res, int[] candidates, int target, ArrayList<Integer> templist, int index) {
@@ -71,11 +74,6 @@ class Solution {
 
 
 
-
-
-
-
-```
 
 
 
